@@ -1,0 +1,87 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    background-color:#1e1e2e;
+    color:#ffffff;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    transition: background 0.5s ease-in-out; 
+}
+
+/*日历组件*/
+.calendar-icon{
+    position:absolute;
+    top:20px;
+    right:20px;
+    height:80px;
+    width:80px;
+    border: none;
+    background:url("../Material/calendar.png") no-repeat center center;
+    background-size: contain;
+    cursor:pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.calendar-icon:hover {
+    transform: scale(1.1);
+}
+
+/*开始按钮*/
+.Start_Game button {
+    background-position: center; 
+    width: 300px; 
+    height: 300px; 
+    border: none;
+    cursor: pointer;
+    background: url('../material/Start.png') no-repeat center center;
+    background-size: contain; 
+    font-size: 0; 
+    transition: transform 0.2s ease-in-out;
+    margin-top: 300px;
+}
+
+.Start_Game button:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*日历页面*/
+.calendar-page{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    padding:20px;
+    color:#fff;
+    overflow-y:auto;
+}
+.calendar-page.active{
+    display: block;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.day.signed-in {
+    background-color: #4caf50;
+}
+
+
+
+
