@@ -1,0 +1,117 @@
+/* 日历页面的样式 */
+.calendar-page {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(79, 125, 135, 0.85);
+    padding: 20px;
+    color: #fff;
+    overflow-y: auto;
+    z-index: 1000; /* 确保日历页面位于最上层 */
+}
+
+/* 激活日历页面时显示 */
+.calendar-page.active {
+    display: block;
+}
+
+/* 返回按钮 */
+.back-button {
+    color: white;
+    cursor: pointer;
+    background-image: url('../Material/AcherGirl_v02.svg');
+    background-size: 100% 100%;  /* 背景图按按钮大小拉伸 */
+    position: absolute;  
+    background-repeat: no-repeat;
+    top: 0;  
+    left: 0; 
+    width: 110px;  /* 设置按钮的大小 */
+    height: 110px; /* 设置按钮的大小 */
+    z-index: 1000;  
+}
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+/* 日历头部 */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.month-year {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 上下月份按钮 */
+span.prev-month, span.next-month {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 日历网格 */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 每行7个格子 */
+    gap: 5px;
+    margin-top: 30px;
+}
+
+/* 星期和日期 */
+.day-name, .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+    transition: all 0.3s ease; 
+}
+
+.day:hover {
+    border: 2px solid rgba(255, 255, 255, 1);  /* 悬停时边框变得更加清晰 */
+    font-size: 18px;  /* 悬停时字体增大 */
+    transform: scale(1.1);  /* 略微放大元素 */
+}
+
+/* 当前日期 */
+.day.today {
+    background-color: rgb(57, 173, 181);
+    color: white;
+    font-weight: bold;
+}
+
+/* 月份选择器样式 */
+.month-selector, .year-selector {
+    position: absolute;
+    top: 60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(34, 57, 75, 0.8);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(15, 42, 48, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.month-option, .year-option {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.month-option:hover, .year-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+

@@ -1,0 +1,16 @@
+{
+  "name": "myadventuregame",
+  "version": "1.0.0",
+  "description": "- **HTML5**：\r   - 用于构建游戏的结构，比如页面的布局、日记模块、日程模块等。\r   - 重点技术：`<canvas>` 标签，用于绘制游戏图形。\r - **CSS3**：\r   - 用于设计游戏的像素风样式和动画。\r   - 重点技术：\r     - **CSS 动画**：设计按钮交互、模态框的出现/消失。\r     - **Flexbox/Grid 布局**：优化界面布局，适配多种屏幕分辨率。\r - **JavaScript (ES6+)**：\r   - 游戏的核心逻辑，包括角色移动、地图切换、事件触发等。\r   - 数据管理：处理日记、日程和学习内容的存储与更新。\r   - DOM 操作：动态更新 UI，监听用户交互（如键盘和鼠标事件）。",
+  "main": "Electron.js",
+  "scripts": {
+    "start": "call node_modules\\.bin\\electron .",
+    "pack": "electron-packager . MyAdventureGame --platform=win32 --arch=x64 --out=dist/ --overwrite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-packager": "^17.1.2"
+  }
+}
